@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13802D121192C213BE7AA538 /* Pods_SchoolTimetable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E87F6E7B75E8C06853A6EA /* Pods_SchoolTimetable.framework */; };
 		5237421128B9039A003FAA47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5237421028B9039A003FAA47 /* AppDelegate.swift */; };
 		5237421328B9039A003FAA47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5237421228B9039A003FAA47 /* SceneDelegate.swift */; };
-		5237421528B9039A003FAA47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5237421428B9039A003FAA47 /* ViewController.swift */; };
-		5237421828B9039A003FAA47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5237421628B9039A003FAA47 /* Main.storyboard */; };
 		5237421A28B9039B003FAA47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5237421928B9039B003FAA47 /* Assets.xcassets */; };
 		5237421D28B9039B003FAA47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5237421B28B9039B003FAA47 /* LaunchScreen.storyboard */; };
+		52AD8D8828BA3F81001C77F2 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD8D8728BA3F81001C77F2 /* ScheduleVC.swift */; };
+		52AD8D8B28BB506B001C77F2 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD8D8A28BB506B001C77F2 /* TabBarVC.swift */; };
+		52AD8D8D28BB520D001C77F2 /* TasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD8D8C28BB520D001C77F2 /* TasksVC.swift */; };
+		52AD8D8F28BB5216001C77F2 /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD8D8E28BB5216001C77F2 /* ContactsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02E87F6E7B75E8C06853A6EA /* Pods_SchoolTimetable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolTimetable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5237420D28B9039A003FAA47 /* SchoolTimetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolTimetable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5237421028B9039A003FAA47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5237421228B9039A003FAA47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5237421428B9039A003FAA47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5237421728B9039A003FAA47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5237421928B9039B003FAA47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5237421C28B9039B003FAA47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5237421E28B9039B003FAA47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52AD8D8728BA3F81001C77F2 /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
+		52AD8D8A28BB506B001C77F2 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		52AD8D8C28BB520D001C77F2 /* TasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksVC.swift; sourceTree = "<group>"; };
+		52AD8D8E28BB5216001C77F2 /* ContactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsVC.swift; sourceTree = "<group>"; };
+		AB157861A9E3A36ED6100C18 /* Pods-SchoolTimetable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolTimetable.debug.xcconfig"; path = "Target Support Files/Pods-SchoolTimetable/Pods-SchoolTimetable.debug.xcconfig"; sourceTree = "<group>"; };
+		E0B85047427947159FA3CAEB /* Pods-SchoolTimetable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolTimetable.release.xcconfig"; path = "Target Support Files/Pods-SchoolTimetable/Pods-SchoolTimetable.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13802D121192C213BE7AA538 /* Pods_SchoolTimetable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12456AE635FA02196BE48AEA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB157861A9E3A36ED6100C18 /* Pods-SchoolTimetable.debug.xcconfig */,
+				E0B85047427947159FA3CAEB /* Pods-SchoolTimetable.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5237420428B9039A003FAA47 = {
 			isa = PBXGroup;
 			children = (
 				5237420F28B9039A003FAA47 /* SchoolTimetable */,
 				5237420E28B9039A003FAA47 /* Products */,
+				12456AE635FA02196BE48AEA /* Pods */,
+				A462DBB73C6EA95D8BBB2FBA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +76,153 @@
 		5237420F28B9039A003FAA47 /* SchoolTimetable */ = {
 			isa = PBXGroup;
 			children = (
-				5237421028B9039A003FAA47 /* AppDelegate.swift */,
-				5237421228B9039A003FAA47 /* SceneDelegate.swift */,
-				5237421428B9039A003FAA47 /* ViewController.swift */,
-				5237421628B9039A003FAA47 /* Main.storyboard */,
+				5237422428B903CC003FAA47 /* Aplication */,
+				5237422728B903F2003FAA47 /* Model */,
+				5237422628B903EB003FAA47 /* Views */,
+				5237422528B903DB003FAA47 /* Controllers */,
+				5237422828B90400003FAA47 /* Resorces */,
+				5237422B28B9046B003FAA47 /* Helpers */,
+				5237422A28B9045D003FAA47 /* Services */,
+				5237422928B90412003FAA47 /* Protocols */,
 				5237421928B9039B003FAA47 /* Assets.xcassets */,
 				5237421B28B9039B003FAA47 /* LaunchScreen.storyboard */,
 				5237421E28B9039B003FAA47 /* Info.plist */,
 			);
 			path = SchoolTimetable;
+			sourceTree = "<group>";
+		};
+		5237422428B903CC003FAA47 /* Aplication */ = {
+			isa = PBXGroup;
+			children = (
+				5237421028B9039A003FAA47 /* AppDelegate.swift */,
+				5237421228B9039A003FAA47 /* SceneDelegate.swift */,
+			);
+			path = Aplication;
+			sourceTree = "<group>";
+		};
+		5237422528B903DB003FAA47 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52AD8D8928BB5059001C77F2 /* TabBarController */,
+				5237422C28B9049A003FAA47 /* ScheduleVC */,
+				5237422D28B904A7003FAA47 /* TasksVC */,
+				5237422E28B904B3003FAA47 /* ContactsVC */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5237422628B903EB003FAA47 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5237422F28B904EB003FAA47 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5237422728B903F2003FAA47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5237422828B90400003FAA47 /* Resorces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resorces;
+			sourceTree = "<group>";
+		};
+		5237422928B90412003FAA47 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5237422A28B9045D003FAA47 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5237422B28B9046B003FAA47 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5237422C28B9049A003FAA47 /* ScheduleVC */ = {
+			isa = PBXGroup;
+			children = (
+				5237423028B90501003FAA47 /* View */,
+				52AD8D8728BA3F81001C77F2 /* ScheduleVC.swift */,
+			);
+			path = ScheduleVC;
+			sourceTree = "<group>";
+		};
+		5237422D28B904A7003FAA47 /* TasksVC */ = {
+			isa = PBXGroup;
+			children = (
+				5237423128B90508003FAA47 /* View */,
+				52AD8D8C28BB520D001C77F2 /* TasksVC.swift */,
+			);
+			path = TasksVC;
+			sourceTree = "<group>";
+		};
+		5237422E28B904B3003FAA47 /* ContactsVC */ = {
+			isa = PBXGroup;
+			children = (
+				5237423228B90511003FAA47 /* View */,
+				52AD8D8E28BB5216001C77F2 /* ContactsVC.swift */,
+			);
+			path = ContactsVC;
+			sourceTree = "<group>";
+		};
+		5237422F28B904EB003FAA47 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5237423028B90501003FAA47 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5237423128B90508003FAA47 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5237423228B90511003FAA47 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52AD8D8928BB5059001C77F2 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				52AD8D8A28BB506B001C77F2 /* TabBarVC.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		A462DBB73C6EA95D8BBB2FBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02E87F6E7B75E8C06853A6EA /* Pods_SchoolTimetable.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5237422128B9039B003FAA47 /* Build configuration list for PBXNativeTarget "SchoolTimetable" */;
 			buildPhases = (
+				0E0F47EDABC8688B2C804E6C /* [CP] Check Pods Manifest.lock */,
 				5237420928B9039A003FAA47 /* Sources */,
 				5237420A28B9039A003FAA47 /* Frameworks */,
 				5237420B28B9039A003FAA47 /* Resources */,
+				04FAA5AE407C2A6C25C82E06 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +287,70 @@
 			files = (
 				5237421D28B9039B003FAA47 /* LaunchScreen.storyboard in Resources */,
 				5237421A28B9039B003FAA47 /* Assets.xcassets in Resources */,
-				5237421828B9039A003FAA47 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04FAA5AE407C2A6C25C82E06 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SchoolTimetable/Pods-SchoolTimetable-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SchoolTimetable/Pods-SchoolTimetable-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SchoolTimetable/Pods-SchoolTimetable-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0E0F47EDABC8688B2C804E6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SchoolTimetable-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5237420928B9039A003FAA47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5237421528B9039A003FAA47 /* ViewController.swift in Sources */,
 				5237421128B9039A003FAA47 /* AppDelegate.swift in Sources */,
 				5237421328B9039A003FAA47 /* SceneDelegate.swift in Sources */,
+				52AD8D8D28BB520D001C77F2 /* TasksVC.swift in Sources */,
+				52AD8D8B28BB506B001C77F2 /* TabBarVC.swift in Sources */,
+				52AD8D8828BA3F81001C77F2 /* ScheduleVC.swift in Sources */,
+				52AD8D8F28BB5216001C77F2 /* ContactsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5237421628B9039A003FAA47 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5237421728B9039A003FAA47 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5237421B28B9039B003FAA47 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,6 +480,7 @@
 		};
 		5237422228B9039B003FAA47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB157861A9E3A36ED6100C18 /* Pods-SchoolTimetable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,9 +491,9 @@
 				INFOPLIST_FILE = SchoolTimetable/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,12 +503,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		5237422328B9039B003FAA47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0B85047427947159FA3CAEB /* Pods-SchoolTimetable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,9 +520,9 @@
 				INFOPLIST_FILE = SchoolTimetable/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +532,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
