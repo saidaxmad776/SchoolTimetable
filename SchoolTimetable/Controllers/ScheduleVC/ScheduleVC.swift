@@ -32,6 +32,16 @@ class ScheduleVC: UIViewController {
         return button
     }()
     
+    private let idScheduleCell = "idScheduleCell"
+    
+    private let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.bounces = false
+        tableView.showsVerticalScrollIndicator = false
+        tableView.separatorInset = .zero
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,12 +107,15 @@ extension ScheduleVC {
         calendar.addConstraint(calendarHeightConstraints)
 
         view.addSubview(showHideButton)
+        
+        view.addSubview(tableView)
+        tableView.register(ScheduleTVCell.self, forCellReuseIdentifier: idScheduleCell)
     }
     
     private func setDelegate() {
 
-//        tableView.delegate = self
-//        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         
         calendar.delegate = self
         calendar.dataSource = self
@@ -123,11 +136,11 @@ extension ScheduleVC {
             showHideButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             showHideButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
             showHideButton.heightAnchor.constraint(equalToConstant: 20),
-//
-//            tableView.topAnchor.constraint(equalTo: showHideButton.bottomAnchor, constant: 10),
-//            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
-//            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-//            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            
+            tableView.topAnchor.constraint(equalTo: showHideButton.bottomAnchor, constant: 10),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
             
         ])
     }
@@ -144,4 +157,22 @@ extension ScheduleVC: FSCalendarDataSource, FSCalendarDelegate {
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         
     }
+}
+
+extension ScheduleVC: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: idScheduleCell, for: indexPath) as! ScheduleTVCell
+
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+  
 }

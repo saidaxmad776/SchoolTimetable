@@ -16,6 +16,20 @@
 		52AD8D8B28BB506B001C77F2 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD8D8A28BB506B001C77F2 /* TabBarVC.swift */; };
 		52AD8D8D28BB520D001C77F2 /* TasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD8D8C28BB520D001C77F2 /* TasksVC.swift */; };
 		52AD8D8F28BB5216001C77F2 /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD8D8E28BB5216001C77F2 /* ContactsVC.swift */; };
+		52EF279228BB790600182438 /* TasksTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF279128BB790600182438 /* TasksTVCell.swift */; };
+		52EF279528BB7B2100182438 /* AlertDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF279428BB7B2100182438 /* AlertDate.swift */; };
+		52EF279728BB7B5700182438 /* AlertForCellName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF279628BB7B5700182438 /* AlertForCellName.swift */; };
+		52EF279928BB7B9F00182438 /* AlertOfTeacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF279828BB7B9F00182438 /* AlertOfTeacher.swift */; };
+		52EF279B28BB7BBE00182438 /* AlertOk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF279A28BB7BBE00182438 /* AlertOk.swift */; };
+		52EF279D28BB7BD700182438 /* AlertPhotoCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF279C28BB7BD700182438 /* AlertPhotoCamera.swift */; };
+		52EF279F28BB7C0400182438 /* AlertTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF279E28BB7C0400182438 /* AlertTime.swift */; };
+		52EF27A128BB7C7100182438 /* UIAlertControllerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27A028BB7C7100182438 /* UIAlertControllerError.swift */; };
+		52EF27A328BB7CB600182438 /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27A228BB7CB600182438 /* UIColor + Ext.swift */; };
+		52EF27A528BB7CEA00182438 /* UILabel + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27A428BB7CEA00182438 /* UILabel + Ext.swift */; };
+		52EF27A728BB7D1100182438 /* UIStackView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27A628BB7D1100182438 /* UIStackView + Ext.swift */; };
+		52EF27A928BB80E600182438 /* ScheduleTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27A828BB80E600182438 /* ScheduleTVCell.swift */; };
+		52EF27AB28BB902E00182438 /* UIFont + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27AA28BB902E00182438 /* UIFont + Ext.swift */; };
+		52EF27AD28BB91FE00182438 /* PressReadyButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27AC28BB91FE00182438 /* PressReadyButtonProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +44,20 @@
 		52AD8D8A28BB506B001C77F2 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		52AD8D8C28BB520D001C77F2 /* TasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksVC.swift; sourceTree = "<group>"; };
 		52AD8D8E28BB5216001C77F2 /* ContactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsVC.swift; sourceTree = "<group>"; };
+		52EF279128BB790600182438 /* TasksTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTVCell.swift; sourceTree = "<group>"; };
+		52EF279428BB7B2100182438 /* AlertDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDate.swift; sourceTree = "<group>"; };
+		52EF279628BB7B5700182438 /* AlertForCellName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertForCellName.swift; sourceTree = "<group>"; };
+		52EF279828BB7B9F00182438 /* AlertOfTeacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertOfTeacher.swift; sourceTree = "<group>"; };
+		52EF279A28BB7BBE00182438 /* AlertOk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertOk.swift; sourceTree = "<group>"; };
+		52EF279C28BB7BD700182438 /* AlertPhotoCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPhotoCamera.swift; sourceTree = "<group>"; };
+		52EF279E28BB7C0400182438 /* AlertTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTime.swift; sourceTree = "<group>"; };
+		52EF27A028BB7C7100182438 /* UIAlertControllerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerError.swift; sourceTree = "<group>"; };
+		52EF27A228BB7CB600182438 /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
+		52EF27A428BB7CEA00182438 /* UILabel + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Ext.swift"; sourceTree = "<group>"; };
+		52EF27A628BB7D1100182438 /* UIStackView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Ext.swift"; sourceTree = "<group>"; };
+		52EF27A828BB80E600182438 /* ScheduleTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTVCell.swift; sourceTree = "<group>"; };
+		52EF27AA28BB902E00182438 /* UIFont + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Ext.swift"; sourceTree = "<group>"; };
+		52EF27AC28BB91FE00182438 /* PressReadyButtonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressReadyButtonProtocol.swift; sourceTree = "<group>"; };
 		AB157861A9E3A36ED6100C18 /* Pods-SchoolTimetable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolTimetable.debug.xcconfig"; path = "Target Support Files/Pods-SchoolTimetable/Pods-SchoolTimetable.debug.xcconfig"; sourceTree = "<group>"; };
 		E0B85047427947159FA3CAEB /* Pods-SchoolTimetable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolTimetable.release.xcconfig"; path = "Target Support Files/Pods-SchoolTimetable/Pods-SchoolTimetable.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +143,12 @@
 			isa = PBXGroup;
 			children = (
 				5237422F28B904EB003FAA47 /* Cells */,
+				52EF279428BB7B2100182438 /* AlertDate.swift */,
+				52EF279628BB7B5700182438 /* AlertForCellName.swift */,
+				52EF279828BB7B9F00182438 /* AlertOfTeacher.swift */,
+				52EF279A28BB7BBE00182438 /* AlertOk.swift */,
+				52EF279C28BB7BD700182438 /* AlertPhotoCamera.swift */,
+				52EF279E28BB7C0400182438 /* AlertTime.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,6 +170,7 @@
 		5237422928B90412003FAA47 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				52EF27AC28BB91FE00182438 /* PressReadyButtonProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -150,6 +185,11 @@
 		5237422B28B9046B003FAA47 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				52EF27A028BB7C7100182438 /* UIAlertControllerError.swift */,
+				52EF27A228BB7CB600182438 /* UIColor + Ext.swift */,
+				52EF27A428BB7CEA00182438 /* UILabel + Ext.swift */,
+				52EF27A628BB7D1100182438 /* UIStackView + Ext.swift */,
+				52EF27AA28BB902E00182438 /* UIFont + Ext.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -191,6 +231,7 @@
 		5237423028B90501003FAA47 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				52EF27A828BB80E600182438 /* ScheduleTVCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,6 +239,7 @@
 		5237423128B90508003FAA47 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				52EF279128BB790600182438 /* TasksTVCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -339,11 +381,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EF279D28BB7BD700182438 /* AlertPhotoCamera.swift in Sources */,
+				52EF279928BB7B9F00182438 /* AlertOfTeacher.swift in Sources */,
+				52EF279528BB7B2100182438 /* AlertDate.swift in Sources */,
 				5237421128B9039A003FAA47 /* AppDelegate.swift in Sources */,
 				5237421328B9039A003FAA47 /* SceneDelegate.swift in Sources */,
+				52EF279B28BB7BBE00182438 /* AlertOk.swift in Sources */,
+				52EF27A928BB80E600182438 /* ScheduleTVCell.swift in Sources */,
+				52EF27AD28BB91FE00182438 /* PressReadyButtonProtocol.swift in Sources */,
 				52AD8D8D28BB520D001C77F2 /* TasksVC.swift in Sources */,
+				52EF27A328BB7CB600182438 /* UIColor + Ext.swift in Sources */,
+				52EF27A528BB7CEA00182438 /* UILabel + Ext.swift in Sources */,
+				52EF27A128BB7C7100182438 /* UIAlertControllerError.swift in Sources */,
 				52AD8D8B28BB506B001C77F2 /* TabBarVC.swift in Sources */,
+				52EF27AB28BB902E00182438 /* UIFont + Ext.swift in Sources */,
 				52AD8D8828BA3F81001C77F2 /* ScheduleVC.swift in Sources */,
+				52EF279F28BB7C0400182438 /* AlertTime.swift in Sources */,
+				52EF279228BB790600182438 /* TasksTVCell.swift in Sources */,
+				52EF279728BB7B5700182438 /* AlertForCellName.swift in Sources */,
+				52EF27A728BB7D1100182438 /* UIStackView + Ext.swift in Sources */,
 				52AD8D8F28BB5216001C77F2 /* ContactsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
