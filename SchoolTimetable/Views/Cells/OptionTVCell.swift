@@ -29,14 +29,6 @@ class OptionTVCell: UITableViewCell {
     
     let nameCellLabel = UILabel(text: "", font: UIFont(name: "GillSans-Bold", size: 15), alignment: .center, color: .black)
     
-//    let addImageContacts: UIImageView = {
-//        let imageView = UIImageView()
-//        imageView.layer.cornerRadius = 10
-//        imageView.isHidden = true
-//        imageView.image = UIImage(systemName: "person.fill.badge.plus")
-//        return imageView
-//    }()
-    
     weak var switchReapetDelegate: SwitchReapetProtocol?
     
     
@@ -88,7 +80,6 @@ class OptionTVCell: UITableViewCell {
         backgroundViewCell.addSubview(nameCellLabel)
         contentView.addSubview(repeatSwitch)
         
-//        addView(addImageContacts)
     }
     
     private func setConstraints() {
@@ -106,10 +97,6 @@ class OptionTVCell: UITableViewCell {
             repeatSwitch.centerYAnchor.constraint(equalTo: centerYAnchor),
             repeatSwitch.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
             
-//            addImageContacts.topAnchor.constraint(equalTo: topAnchor, constant: 0),
-//            addImageContacts.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
-//            addImageContacts.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
-//            addImageContacts.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
         ])
     }
     

@@ -9,6 +9,8 @@ import UIKit
 
 class ContactsTVC: UITableViewController {
     
+    let searchController = UISearchController()
+    
     let idContactCell = "idContactCell"
     
     override func viewDidLoad() {
@@ -22,6 +24,11 @@ class ContactsTVC: UITableViewController {
     }
     
     private func setupView() {
+        
+        title = "Contacts"
+        
+        searchController.searchBar.placeholder = "Search"
+        navigationItem.searchController = searchController
         
         tableView.separatorInset = .zero
         tableView.register(ContactsTVCell.self, forCellReuseIdentifier: idContactCell)

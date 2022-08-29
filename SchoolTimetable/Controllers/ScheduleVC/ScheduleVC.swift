@@ -7,6 +7,7 @@
 
 import UIKit
 import FSCalendar
+import RealmSwift
 
 class ScheduleVC: UIViewController {
     
@@ -39,9 +40,13 @@ class ScheduleVC: UIViewController {
         tableView.bounces = false
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorInset = .zero
+        tableView.backgroundColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
+    
+    let localRealm = try! Realm()
+    var scheduleArray: Results<ScheduleModel>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +55,8 @@ class ScheduleVC: UIViewController {
         setConstraints()
         swipeAction()
         setDelegate()
+        
+        scheduleOnDay(date: Date())
         
         if #available(iOS 15.0, *) {
             navigationController?.tabBarController?.tabBar.scrollEdgeAppearance = navigationController?.tabBarController?.tabBar.standardAppearance
@@ -128,13 +135,68 @@ extension ScheduleVC {
         calendar.dataSource = self
     }
     
-    private func setConstraints() {
+    private func scheduleOnDay(date: Date) {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.weekday], from: date)
+        guard let weekday = components.weekday else { return }
+        print(weekday)
         
+        let dateStart = date
+        let dateEnd: Date = {
+            let components = DateComponents(day: 1, second: -1)
+            return Calendar.current.date(byAdding: components, to: dateStart)!
+        }()
+        
+        let predicatRepeat = NSPredicate(format: "scheduleWeekday = \(weekday) AND scheduleReapet = true")
+        let predicateUnrepeat = NSPredicate(format: "scheduleReapet = false AND scheduleDate BETWEEN %@",
+                                            [dateStart, dateEnd])
+        let compound = NSCompoundPredicate(type: .or, subpredicates: [predicatRepeat, predicateUnrepeat])
+        
+        scheduleArray = localRealm.objects(ScheduleModel.self).filter(compound).sorted(byKeyPath: "scheduleTime")
+        tableView.reloadData()
+    }
 
+}
+//        MARK: - FSCalendarDataSource, FSCalendarDelegate
+extension ScheduleVC: FSCalendarDataSource, FSCalendarDelegate {
+    
+    func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
+        calendarHeightConstraints.constant = bounds.height
+        view.layoutIfNeeded()
+    }
+    
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        scheduleOnDay(date: date)
+    }
+}
+
+extension ScheduleVC: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        scheduleArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: idScheduleCell, for: indexPath) as! ScheduleTVCell
+        cell.selectionStyle = .none
         
+        let model = scheduleArray[indexPath.row]
+        cell.configureModel(model: model)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+  
+}
+
+extension ScheduleVC {
+    
+    private func setConstraints() {
+
         NSLayoutConstraint.activate([
             
-
             calendar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
             calendar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             calendar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
@@ -151,35 +213,4 @@ extension ScheduleVC {
             
         ])
     }
-
-}
-//        MARK: - FSCalendarDataSource, FSCalendarDelegate
-extension ScheduleVC: FSCalendarDataSource, FSCalendarDelegate {
-    
-    func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
-        calendarHeightConstraints.constant = bounds.height
-        view.layoutIfNeeded()
-    }
-    
-    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        
-    }
-}
-
-extension ScheduleVC: UITableViewDataSource, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: idScheduleCell, for: indexPath) as! ScheduleTVCell
-
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
-    }
-  
 }

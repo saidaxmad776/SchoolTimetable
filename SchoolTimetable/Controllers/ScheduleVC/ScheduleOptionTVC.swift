@@ -20,7 +20,7 @@ class ScheduleOptionTVC: UITableViewController {
                          ["", ""],
                          ["Repeat every 7 days"],]
     
-//    private var scheduleModel = ScheduleModel()
+    private var scheduleModel = ScheduleModel()
     
     var hexColorCell = "FFFFFF"
     
@@ -36,9 +36,9 @@ class ScheduleOptionTVC: UITableViewController {
     }
     
     @objc private func saveButtonTap() {
-//        scheduleModel.scheduleColor = hexColorCell
-//        RealmManager.shared.saveScheduleModel(model: scheduleModel)
-//        scheduleModel = ScheduleModel()
+        scheduleModel.scheduleColor = hexColorCell
+        RealmManager.shared.saveScheduleModel(model: scheduleModel)
+        scheduleModel = ScheduleModel()
         alertOk(title: "Success")
         hexColorCell = "FFFFFF"
 //        tableView.reloadRows(at: [[0,0],[0,1],[1,0],[1,1],[1,2],[1,3],[2,0]], with: .none)
@@ -104,28 +104,28 @@ class ScheduleOptionTVC: UITableViewController {
         switch indexPath {
         case [0,0]:
             alertDate(label: cell.nameCellLabel) { (numberWeekday, date) in
-//                scheduleModel.scheduleDate = date
-//                scheduleModel.scheduleWeekday = numberWeekday
+                    self.scheduleModel.scheduleDate = date
+                    self.scheduleModel.scheduleWeekday = numberWeekday
             }
         case [0,1]:
             alertTime(label: cell.nameCellLabel) { (time) in
-//                scheduleModel.scheduleTime = time
+                self.scheduleModel.scheduleTime = time
             }
         case [1,0]:
             alertCellName(label: cell.nameCellLabel, name: "Name Lesson", placeHolder: "Enter name lesson") { text in
-//                self.scheduleModel.scheduleName = text
+                self.scheduleModel.scheduleName = text
             }
         case [1,1]:
             alertCellName(label: cell.nameCellLabel, name: "Type lesson", placeHolder: "Enter type lesson") { text in
-//                self.scheduleModel.scheduleType = text
+                self.scheduleModel.scheduleType = text
             }
         case [1,2]:
             alertCellName(label: cell.nameCellLabel, name: "Building number", placeHolder: "Enter type lesson") { text in
-//                self.scheduleModel.scheduleBuilding = text
+                self.scheduleModel.scheduleBuilding = text
             }
         case [1,3]:
             alertCellName(label: cell.nameCellLabel, name: "Building number", placeHolder: "Enter type lesson") { text in
-//                self.scheduleModel.scheduleAudience = text
+                self.scheduleModel.scheduleAudience = text
             }
         case [2,0]: pushController(vc: ContactsTicherVC())
         case [3,0]: pushController(vc: ScheduleColorVC())
@@ -141,7 +141,7 @@ class ScheduleOptionTVC: UITableViewController {
 
 extension ScheduleOptionTVC: SwitchReapetProtocol {
     func switchReapet(value: Bool) {
-//        scheduleModel.scheduleReapet = value
+        scheduleModel.scheduleReapet = value
     }
 
 }

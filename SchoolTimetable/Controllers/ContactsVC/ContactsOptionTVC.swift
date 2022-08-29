@@ -67,7 +67,7 @@ class ContactsOptionTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return 30
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -87,8 +87,8 @@ class ContactsOptionTVC: UITableViewController {
         case 3: alertOfTeacher(label: cell.nameCellLabel) { type in
             print(type)
         }
-        case 4: alertPhotoCamera(label: cell.nameCellLabel) { source in
-//            chooseImagePicker(source: source)
+        case 4: alertPhotoCamera(label: cell.nameCellLabel) { [self] source in
+            chooseImagePicker(source: source)
         }
         default:
             print("OK")
@@ -101,8 +101,7 @@ class ContactsOptionTVC: UITableViewController {
         }
 }
 
-
-extension ContactsTVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension ContactsOptionTVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func chooseImagePicker(source: UIImagePickerController.SourceType) {
         

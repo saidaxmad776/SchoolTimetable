@@ -108,19 +108,19 @@ class ScheduleTVCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-//    func configureModel(model: ScheduleModel) {
+    func configureModel(model: ScheduleModel) {
         
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "HH:mm"
-//
-//        lessonName.text = model.scheduleName
-//        teacherName.text = model.scheduleTeacher
-//        lessonTime.text = dateFormatter.string(from: model.scheduleTime)
-//        lessonType.text = model.scheduleType
-//        lessonBuilding.text = model.scheduleBuilding
-//        lessonAud.text = model.scheduleAudience
-//        backgroundColor = UIColor().colorFromHex("\(model.scheduleColor)")
-//    }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+
+        lessonName.text = model.scheduleName
+        teacherName.text = model.scheduleTeacher
+        lessonTime.text = dateFormatter.string(from: model.scheduleTime)
+        lessonType.text = model.scheduleType
+        lessonBuilding.text = model.scheduleBuilding
+        lessonAud.text = model.scheduleAudience
+        backgroundColor = UIColor().colorFromHex("\(model.scheduleColor)")
+    }
     
     private func setupView() {
         
