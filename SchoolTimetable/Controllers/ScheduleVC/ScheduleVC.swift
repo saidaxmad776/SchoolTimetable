@@ -53,7 +53,14 @@ class ScheduleVC: UIViewController {
         
         if #available(iOS 15.0, *) {
             navigationController?.tabBarController?.tabBar.scrollEdgeAppearance = navigationController?.tabBarController?.tabBar.standardAppearance
+            
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTap))
         }
+    }
+    
+    @objc private func addButtonTap() {
+        let scheduleOptionTVC = ScheduleOptionTVC()
+        navigationController?.pushViewController(scheduleOptionTVC, animated: true)
     }
     
     @objc private func showHideTapBTN() {
