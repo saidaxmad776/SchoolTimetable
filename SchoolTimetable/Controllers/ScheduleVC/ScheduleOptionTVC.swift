@@ -103,12 +103,12 @@ class ScheduleOptionTVC: UITableViewController {
         
         switch indexPath {
         case [0,0]:
-            alertDate(label: cell.nameCellLabel) { [self] (numberWeekday, date) in
+            alertDate(label: cell.nameCellLabel) { (numberWeekday, date) in
 //                scheduleModel.scheduleDate = date
 //                scheduleModel.scheduleWeekday = numberWeekday
             }
         case [0,1]:
-            alertTime(label: cell.nameCellLabel) { [self] (time) in
+            alertTime(label: cell.nameCellLabel) { (time) in
 //                scheduleModel.scheduleTime = time
             }
         case [1,0]:
@@ -127,7 +127,7 @@ class ScheduleOptionTVC: UITableViewController {
             alertCellName(label: cell.nameCellLabel, name: "Building number", placeHolder: "Enter type lesson") { text in
 //                self.scheduleModel.scheduleAudience = text
             }
-        case [2,0]: pushController(vc: ScheduleTicherVC())
+        case [2,0]: pushController(vc: ContactsTicherVC())
         case [3,0]: pushController(vc: ScheduleColorVC())
         default: print("ok")
         }

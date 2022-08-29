@@ -15,7 +15,7 @@
 		52AD8D8828BA3F81001C77F2 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD8D8728BA3F81001C77F2 /* ScheduleVC.swift */; };
 		52AD8D8B28BB506B001C77F2 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD8D8A28BB506B001C77F2 /* TabBarVC.swift */; };
 		52AD8D8D28BB520D001C77F2 /* TasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD8D8C28BB520D001C77F2 /* TasksVC.swift */; };
-		52AD8D8F28BB5216001C77F2 /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD8D8E28BB5216001C77F2 /* ContactsVC.swift */; };
+		52AD8D8F28BB5216001C77F2 /* ContactsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD8D8E28BB5216001C77F2 /* ContactsTVC.swift */; };
 		52EF279228BB790600182438 /* TasksTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF279128BB790600182438 /* TasksTVCell.swift */; };
 		52EF279528BB7B2100182438 /* AlertDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF279428BB7B2100182438 /* AlertDate.swift */; };
 		52EF279728BB7B5700182438 /* AlertForCellName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF279628BB7B5700182438 /* AlertForCellName.swift */; };
@@ -34,10 +34,14 @@
 		52EF27B128BB9EFD00182438 /* ColorTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27B028BB9EFD00182438 /* ColorTVCell.swift */; };
 		52EF27B328BB9F1200182438 /* OptionHTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27B228BB9F1200182438 /* OptionHTCell.swift */; };
 		52EF27B528BB9F2F00182438 /* OptionTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27B428BB9F2F00182438 /* OptionTVCell.swift */; };
-		52EF27B828BBEE4600182438 /* ScheduleTicherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27B728BBEE4600182438 /* ScheduleTicherVC.swift */; };
+		52EF27B828BBEE4600182438 /* ContactsTicherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27B728BBEE4600182438 /* ContactsTicherVC.swift */; };
 		52EF27BA28BBEE8800182438 /* ScheduleColorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27B928BBEE8800182438 /* ScheduleColorVC.swift */; };
 		52EF27BD28BC7C3600182438 /* TasksOptionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27BC28BC7C3600182438 /* TasksOptionTVC.swift */; };
 		52EF27BF28BC7CAA00182438 /* TasksColorTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27BE28BC7CAA00182438 /* TasksColorTVC.swift */; };
+		52EF27C128BC84DE00182438 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27C028BC84DE00182438 /* RealmManager.swift */; };
+		52EF27C328BC84FF00182438 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27C228BC84FE00182438 /* ScheduleModel.swift */; };
+		52EF27C628BC869A00182438 /* ContactsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27C528BC869A00182438 /* ContactsTVCell.swift */; };
+		52EF27C828BC970E00182438 /* ContactsOptionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27C728BC970E00182438 /* ContactsOptionTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +55,7 @@
 		52AD8D8728BA3F81001C77F2 /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		52AD8D8A28BB506B001C77F2 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		52AD8D8C28BB520D001C77F2 /* TasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksVC.swift; sourceTree = "<group>"; };
-		52AD8D8E28BB5216001C77F2 /* ContactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsVC.swift; sourceTree = "<group>"; };
+		52AD8D8E28BB5216001C77F2 /* ContactsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTVC.swift; sourceTree = "<group>"; };
 		52EF279128BB790600182438 /* TasksTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTVCell.swift; sourceTree = "<group>"; };
 		52EF279428BB7B2100182438 /* AlertDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDate.swift; sourceTree = "<group>"; };
 		52EF279628BB7B5700182438 /* AlertForCellName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertForCellName.swift; sourceTree = "<group>"; };
@@ -70,10 +74,14 @@
 		52EF27B028BB9EFD00182438 /* ColorTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTVCell.swift; sourceTree = "<group>"; };
 		52EF27B228BB9F1200182438 /* OptionHTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionHTCell.swift; sourceTree = "<group>"; };
 		52EF27B428BB9F2F00182438 /* OptionTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTVCell.swift; sourceTree = "<group>"; };
-		52EF27B728BBEE4600182438 /* ScheduleTicherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTicherVC.swift; sourceTree = "<group>"; };
+		52EF27B728BBEE4600182438 /* ContactsTicherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTicherVC.swift; sourceTree = "<group>"; };
 		52EF27B928BBEE8800182438 /* ScheduleColorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleColorVC.swift; sourceTree = "<group>"; };
 		52EF27BC28BC7C3600182438 /* TasksOptionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksOptionTVC.swift; sourceTree = "<group>"; };
 		52EF27BE28BC7CAA00182438 /* TasksColorTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksColorTVC.swift; sourceTree = "<group>"; };
+		52EF27C028BC84DE00182438 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		52EF27C228BC84FE00182438 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
+		52EF27C528BC869A00182438 /* ContactsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTVCell.swift; sourceTree = "<group>"; };
+		52EF27C728BC970E00182438 /* ContactsOptionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsOptionTVC.swift; sourceTree = "<group>"; };
 		AB157861A9E3A36ED6100C18 /* Pods-SchoolTimetable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolTimetable.debug.xcconfig"; path = "Target Support Files/Pods-SchoolTimetable/Pods-SchoolTimetable.debug.xcconfig"; sourceTree = "<group>"; };
 		E0B85047427947159FA3CAEB /* Pods-SchoolTimetable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolTimetable.release.xcconfig"; path = "Target Support Files/Pods-SchoolTimetable/Pods-SchoolTimetable.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,6 +180,7 @@
 		5237422728B903F2003FAA47 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				52EF27C228BC84FE00182438 /* ScheduleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +203,7 @@
 		5237422A28B9045D003FAA47 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				52EF27C028BC84DE00182438 /* RealmManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -216,7 +226,6 @@
 				5237423028B90501003FAA47 /* View */,
 				52AD8D8728BA3F81001C77F2 /* ScheduleVC.swift */,
 				52EF27AE28BB9CCC00182438 /* ScheduleOptionTVC.swift */,
-				52EF27B728BBEE4600182438 /* ScheduleTicherVC.swift */,
 				52EF27B928BBEE8800182438 /* ScheduleColorVC.swift */,
 			);
 			path = ScheduleVC;
@@ -237,7 +246,9 @@
 			isa = PBXGroup;
 			children = (
 				5237423228B90511003FAA47 /* View */,
-				52AD8D8E28BB5216001C77F2 /* ContactsVC.swift */,
+				52AD8D8E28BB5216001C77F2 /* ContactsTVC.swift */,
+				52EF27B728BBEE4600182438 /* ContactsTicherVC.swift */,
+				52EF27C728BC970E00182438 /* ContactsOptionTVC.swift */,
 			);
 			path = ContactsVC;
 			sourceTree = "<group>";
@@ -271,6 +282,7 @@
 		5237423228B90511003FAA47 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				52EF27C528BC869A00182438 /* ContactsTVCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -414,24 +426,28 @@
 				5237421328B9039A003FAA47 /* SceneDelegate.swift in Sources */,
 				52EF279B28BB7BBE00182438 /* AlertOk.swift in Sources */,
 				52EF27A928BB80E600182438 /* ScheduleTVCell.swift in Sources */,
-				52EF27B828BBEE4600182438 /* ScheduleTicherVC.swift in Sources */,
+				52EF27B828BBEE4600182438 /* ContactsTicherVC.swift in Sources */,
 				52EF27AD28BB91FE00182438 /* PressReadyButtonProtocol.swift in Sources */,
 				52AD8D8D28BB520D001C77F2 /* TasksVC.swift in Sources */,
+				52EF27C328BC84FF00182438 /* ScheduleModel.swift in Sources */,
+				52EF27C628BC869A00182438 /* ContactsTVCell.swift in Sources */,
 				52EF27A328BB7CB600182438 /* UIColor + Ext.swift in Sources */,
 				52EF27BA28BBEE8800182438 /* ScheduleColorVC.swift in Sources */,
+				52EF27C128BC84DE00182438 /* RealmManager.swift in Sources */,
 				52EF27A528BB7CEA00182438 /* UILabel + Ext.swift in Sources */,
 				52EF27A128BB7C7100182438 /* UIAlertControllerError.swift in Sources */,
 				52EF27BD28BC7C3600182438 /* TasksOptionTVC.swift in Sources */,
 				52AD8D8B28BB506B001C77F2 /* TabBarVC.swift in Sources */,
 				52EF27AB28BB902E00182438 /* UIFont + Ext.swift in Sources */,
 				52AD8D8828BA3F81001C77F2 /* ScheduleVC.swift in Sources */,
+				52EF27C828BC970E00182438 /* ContactsOptionTVC.swift in Sources */,
 				52EF27BF28BC7CAA00182438 /* TasksColorTVC.swift in Sources */,
 				52EF279F28BB7C0400182438 /* AlertTime.swift in Sources */,
 				52EF279228BB790600182438 /* TasksTVCell.swift in Sources */,
 				52EF279728BB7B5700182438 /* AlertForCellName.swift in Sources */,
 				52EF27B328BB9F1200182438 /* OptionHTCell.swift in Sources */,
 				52EF27A728BB7D1100182438 /* UIStackView + Ext.swift in Sources */,
-				52AD8D8F28BB5216001C77F2 /* ContactsVC.swift in Sources */,
+				52AD8D8F28BB5216001C77F2 /* ContactsTVC.swift in Sources */,
 				52EF27B128BB9EFD00182438 /* ColorTVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
