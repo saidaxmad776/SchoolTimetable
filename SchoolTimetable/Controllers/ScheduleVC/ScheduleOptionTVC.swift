@@ -36,13 +36,17 @@ class ScheduleOptionTVC: UITableViewController {
     }
     
     @objc private func saveButtonTap() {
-        scheduleModel.scheduleColor = hexColorCell
-        RealmManager.shared.saveScheduleModel(model: scheduleModel)
-        scheduleModel = ScheduleModel()
-        alertOk(title: "Success")
-        hexColorCell = "FFFFFF"
-//        tableView.reloadRows(at: [[0,0],[0,1],[1,0],[1,1],[1,2],[1,3],[2,0]], with: .none)
-        tableView.reloadData()
+        
+        if scheduleModel.scheduleDate == nil || scheduleModel.scheduleTime == nil || scheduleModel.scheduleName == "Unknown" {
+            alertOk(title: "Error", message: "Required fileds: DATE, TIME, NAME")
+        } else {
+            scheduleModel.scheduleColor = hexColorCell
+            RealmManager.shared.saveScheduleModel(model: scheduleModel)
+            scheduleModel = ScheduleModel()
+            alertOk(title: "Success", message: nil)
+            hexColorCell = "FFFFFF"
+            tableView.reloadData()
+        }
         
     }
     

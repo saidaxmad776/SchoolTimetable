@@ -31,6 +31,13 @@ class TasksColorTVC: UITableViewController {
         tableView.register(OptionHTCell.self, forHeaderFooterViewReuseIdentifier: idTasksSheduleHeader)
     }
     
+    private func setColor(color: String) {
+        let taskOption = self.navigationController?.viewControllers[1] as? TasksOptionTVC
+        taskOption?.hexColor = color
+        taskOption?.tableView.reloadRows(at: [[3,0]], with: .none)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     private func setDelegate() {
         tableView.delegate = self
         tableView.dataSource = self

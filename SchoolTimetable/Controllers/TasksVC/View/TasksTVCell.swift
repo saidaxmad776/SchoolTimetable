@@ -57,6 +57,19 @@ class TasksTVCell: UITableViewCell {
         
     }
     
+    func configure(model: TasksModel) {
+        
+        tasksName.text = model.taskName
+        tasksDescription.text = model.taskDescription
+        backgroundColor = UIColor().colorFromHex("\(model.taskColor)")
+        
+        if model.taskReady {
+            readyButton.setBackgroundImage(UIImage(systemName: "chevron.down.circle.fill"), for: .normal)
+        } else {
+            readyButton.setBackgroundImage(UIImage(systemName: "chevron.down.circle"), for: .normal)
+        }
+    }
+    
     private func setConstraints() {
         
         NSLayoutConstraint.activate([

@@ -16,13 +16,34 @@ class TasksOptionTVC: UITableViewController {
     
     let cellNameArray = ["Date", "Lesson", "Task", ""]
     
+    var hexColor = "1A4766"
+    
+    private var taskModel = TasksModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Option Tasks"
         setDelegate()
         setupView()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveButtonTap))
     }
+    
+   @objc private func saveButtonTap() {
+        
+       if taskModel.taskDate == nil || taskModel.taskName == "Unknown" {
+           alertOk(title: "Error", message: "Required files: DATE")
+       } else {
+           taskModel.taskColor = hexColor
+           RealmManager.shared.saveTaskModel(model: taskModel)
+           taskModel = TasksModel()
+           alertOk(title: "Success", message: nil)
+           hexColor = "1A4766"
+           tableView.reloadData()
+       }
+    }
+    
     
     
     private func setupView() {

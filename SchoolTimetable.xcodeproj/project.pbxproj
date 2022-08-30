@@ -42,6 +42,8 @@
 		52EF27C328BC84FF00182438 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27C228BC84FE00182438 /* ScheduleModel.swift */; };
 		52EF27C628BC869A00182438 /* ContactsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27C528BC869A00182438 /* ContactsTVCell.swift */; };
 		52EF27C828BC970E00182438 /* ContactsOptionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27C728BC970E00182438 /* ContactsOptionTVC.swift */; };
+		52EF27CA28BDE1BA00182438 /* TasksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27C928BDE1BA00182438 /* TasksModel.swift */; };
+		52EF27CC28BDE1E800182438 /* ContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27CB28BDE1E800182438 /* ContactsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		52EF27C228BC84FE00182438 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
 		52EF27C528BC869A00182438 /* ContactsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTVCell.swift; sourceTree = "<group>"; };
 		52EF27C728BC970E00182438 /* ContactsOptionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsOptionTVC.swift; sourceTree = "<group>"; };
+		52EF27C928BDE1BA00182438 /* TasksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksModel.swift; sourceTree = "<group>"; };
+		52EF27CB28BDE1E800182438 /* ContactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsModel.swift; sourceTree = "<group>"; };
 		AB157861A9E3A36ED6100C18 /* Pods-SchoolTimetable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolTimetable.debug.xcconfig"; path = "Target Support Files/Pods-SchoolTimetable/Pods-SchoolTimetable.debug.xcconfig"; sourceTree = "<group>"; };
 		E0B85047427947159FA3CAEB /* Pods-SchoolTimetable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolTimetable.release.xcconfig"; path = "Target Support Files/Pods-SchoolTimetable/Pods-SchoolTimetable.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				52EF27C228BC84FE00182438 /* ScheduleModel.swift */,
+				52EF27C928BDE1BA00182438 /* TasksModel.swift */,
+				52EF27CB28BDE1E800182438 /* ContactsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -417,6 +423,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EF27CC28BDE1E800182438 /* ContactsModel.swift in Sources */,
 				52EF27B528BB9F2F00182438 /* OptionTVCell.swift in Sources */,
 				52EF279D28BB7BD700182438 /* AlertPhotoCamera.swift in Sources */,
 				52EF279928BB7B9F00182438 /* AlertOfTeacher.swift in Sources */,
@@ -449,6 +456,7 @@
 				52EF27A728BB7D1100182438 /* UIStackView + Ext.swift in Sources */,
 				52AD8D8F28BB5216001C77F2 /* ContactsTVC.swift in Sources */,
 				52EF27B128BB9EFD00182438 /* ColorTVCell.swift in Sources */,
+				52EF27CA28BDE1BA00182438 /* TasksModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
