@@ -69,8 +69,13 @@ class ContactsTVCell: UITableViewCell {
         phoneNumber.text = model.contactsPhone
         mailLabel.text = model.contactsMail
         
-        guard let data = model.contactsImage, let image = UIImage(data: data) else { return }
-        contactImageView.image = image
+        if let data = model.contactsImage, let image = UIImage(data: data) {
+            contactImageView.image = image
+        } else {
+            contactImageView.image = UIImage(systemName: "person")
+        }
+        
+        
     }
 
     

@@ -14,13 +14,13 @@ class ScheduleOptionTVC: UITableViewController {
     
     let headerNameArray = ["DATE AND TIME", "LESSON", "TEACHER", "COLOR", "PERIOD"]
     
-    let cellNameArray = [["Date", "Time"],
+    var cellNameArray = [["Date", "Time"],
                          ["Name", "Type", "Building", "Audience"],
                          ["Teacher Name"],
                          ["", ""],
                          ["Repeat every 7 days"],]
     
-    private var scheduleModel = ScheduleModel()
+    var scheduleModel = ScheduleModel()
     
     var hexColorCell = "FFFFFF"
     
@@ -131,7 +131,7 @@ class ScheduleOptionTVC: UITableViewController {
             alertCellName(label: cell.nameCellLabel, name: "Building number", placeHolder: "Enter type lesson") { text in
                 self.scheduleModel.scheduleAudience = text
             }
-        case [2,0]: pushController(vc: ContactsTicherVC())
+        case [2,0]: pushController(vc: ContactsTicherTVC())
         case [3,0]: pushController(vc: ScheduleColorVC())
         default: print("ok")
         }

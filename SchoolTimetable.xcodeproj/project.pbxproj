@@ -34,7 +34,7 @@
 		52EF27B128BB9EFD00182438 /* ColorTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27B028BB9EFD00182438 /* ColorTVCell.swift */; };
 		52EF27B328BB9F1200182438 /* OptionHTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27B228BB9F1200182438 /* OptionHTCell.swift */; };
 		52EF27B528BB9F2F00182438 /* OptionTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27B428BB9F2F00182438 /* OptionTVCell.swift */; };
-		52EF27B828BBEE4600182438 /* ContactsTicherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27B728BBEE4600182438 /* ContactsTicherVC.swift */; };
+		52EF27B828BBEE4600182438 /* ContactsTicherTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27B728BBEE4600182438 /* ContactsTicherTVC.swift */; };
 		52EF27BA28BBEE8800182438 /* ScheduleColorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27B928BBEE8800182438 /* ScheduleColorVC.swift */; };
 		52EF27BD28BC7C3600182438 /* TasksOptionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27BC28BC7C3600182438 /* TasksOptionTVC.swift */; };
 		52EF27BF28BC7CAA00182438 /* TasksColorTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27BE28BC7CAA00182438 /* TasksColorTVC.swift */; };
@@ -76,7 +76,7 @@
 		52EF27B028BB9EFD00182438 /* ColorTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTVCell.swift; sourceTree = "<group>"; };
 		52EF27B228BB9F1200182438 /* OptionHTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionHTCell.swift; sourceTree = "<group>"; };
 		52EF27B428BB9F2F00182438 /* OptionTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTVCell.swift; sourceTree = "<group>"; };
-		52EF27B728BBEE4600182438 /* ContactsTicherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTicherVC.swift; sourceTree = "<group>"; };
+		52EF27B728BBEE4600182438 /* ContactsTicherTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTicherTVC.swift; sourceTree = "<group>"; };
 		52EF27B928BBEE8800182438 /* ScheduleColorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleColorVC.swift; sourceTree = "<group>"; };
 		52EF27BC28BC7C3600182438 /* TasksOptionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksOptionTVC.swift; sourceTree = "<group>"; };
 		52EF27BE28BC7CAA00182438 /* TasksColorTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksColorTVC.swift; sourceTree = "<group>"; };
@@ -254,7 +254,7 @@
 				5237423228B90511003FAA47 /* View */,
 				52AD8D8E28BB5216001C77F2 /* ContactsVC.swift */,
 				52EF27C728BC970E00182438 /* ContactsOptionTVC.swift */,
-				52EF27B728BBEE4600182438 /* ContactsTicherVC.swift */,
+				52EF27B728BBEE4600182438 /* ContactsTicherTVC.swift */,
 			);
 			path = ContactsVC;
 			sourceTree = "<group>";
@@ -433,7 +433,7 @@
 				5237421328B9039A003FAA47 /* SceneDelegate.swift in Sources */,
 				52EF279B28BB7BBE00182438 /* AlertOk.swift in Sources */,
 				52EF27A928BB80E600182438 /* ScheduleTVCell.swift in Sources */,
-				52EF27B828BBEE4600182438 /* ContactsTicherVC.swift in Sources */,
+				52EF27B828BBEE4600182438 /* ContactsTicherTVC.swift in Sources */,
 				52EF27AD28BB91FE00182438 /* PressReadyButtonProtocol.swift in Sources */,
 				52AD8D8D28BB520D001C77F2 /* TasksVC.swift in Sources */,
 				52EF27C328BC84FF00182438 /* ScheduleModel.swift in Sources */,
