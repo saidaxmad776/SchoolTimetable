@@ -6,12 +6,22 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ContactsTVC: UITableViewController {
     
     let searchController = UISearchController()
     
     let idContactCell = "idContactCell"
+    
+    private let localRealm = try! Realm()
+    private var contactsArray: Results<ContactsModel>!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,12 +62,13 @@ class ContactsTVC: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        contactsArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idContactCell, for: indexPath) as! ContactsTVCell
-        
+        let model = contactsArray[indexPath.row]
+        cell.configure(model: model)
         return cell
     }
     
@@ -67,6 +78,17 @@ class ContactsTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("ok")
+    }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let editingRow = contactsArray[indexPath.row]
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, completionHandler in
+            RealmManager.shared.deleteContactsModel(model: editingRow)
+            tableView.reloadData()
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }
 

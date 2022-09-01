@@ -43,8 +43,7 @@ class TasksOptionTVC: UITableViewController {
            tableView.reloadData()
        }
     }
-    
-    
+        
     
     private func setupView() {
         
@@ -70,7 +69,7 @@ class TasksOptionTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idOptionTasksCell, for: indexPath) as! OptionTVCell
         cell.selectionStyle = .none
-        cell.cellTasksConfigure(nameAray: cellNameArray, indexPath: indexPath)
+        cell.cellTasksConfigure(nameAray: cellNameArray, indexPath: indexPath, hexColor: hexColor)
         return cell
     }
    
@@ -94,12 +93,13 @@ class TasksOptionTVC: UITableViewController {
         
         switch indexPath.section {
         case 0: alertDate(label: cell.nameCellLabel) { (numberWeekday, date) in
-            print(numberWeekday, date) }
+            self.taskModel.taskDate = date
+        }
         case 1: alertCellName(label: cell.nameCellLabel, name: "Name Lesson", placeHolder: "Enter name lesson") { text in
-            print(text)
+            self.taskModel.taskName = text
         }
         case 2: alertCellName(label: cell.nameCellLabel, name: "Type lesson", placeHolder: "Enter type lesson") { text in
-            print(text)
+            self.taskModel.taskDescription = text
         }
         case 3: pushController(vc: TasksColorTVC())
         default: print("ok")
@@ -107,6 +107,7 @@ class TasksOptionTVC: UITableViewController {
         
         func pushController(vc: UIViewController) {
             let viewController = vc
+            navigationController?.navigationBar.topItem?.title = "Option"
             navigationController?.pushViewController(viewController, animated: true)
         }
     }

@@ -63,6 +63,15 @@ class ContactsTVCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func configure(model: ContactsModel) {
+        
+        nameLabel.text = model.contactsName
+        phoneNumber.text = model.contactsPhone
+        mailLabel.text = model.contactsMail
+        
+        guard let data = model.contactsImage, let image = UIImage(data: data) else { return }
+        contactImageView.image = image
+    }
 
     
     private func setupView() {
@@ -72,7 +81,7 @@ class ContactsTVCell: UITableViewCell {
         addSubview(nameLabel)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        stackViewLabel = UIStackView(arrangedSubviews: [phoneImageView, phoneNumber, mailImageView, mailLabel], axis: .horizontal, spacing: 3, distributiom: .equalSpacing)
+        stackViewLabel = UIStackView(arrangedSubviews: [phoneImageView, phoneNumber, mailImageView, mailLabel], axis: .vertical, spacing: 5, distributiom: .equalSpacing)
         
         addSubview(stackViewLabel)
         stackViewLabel.translatesAutoresizingMaskIntoConstraints = false

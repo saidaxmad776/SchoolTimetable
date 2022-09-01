@@ -17,6 +17,8 @@ class ContactsOptionTVC: UITableViewController {
     
     let cellNameArray = ["Name", "Phone", "Mail", "Type", ""]
         
+    private var imageIsChange = false
+    private var contactsModel = ContactsModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +35,40 @@ class ContactsOptionTVC: UITableViewController {
         tableView.separatorStyle = .none
         tableView.register(OptionTVCell.self, forCellReuseIdentifier: idContcactsOptionCell)
         tableView.register(OptionHTCell.self, forHeaderFooterViewReuseIdentifier: idContcactsOptionHeader)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save,
+                                                            target: self, action: #selector(saveButtonTap))
+    }
+    
+    @objc private func saveButtonTap() {
+        
+        if contactsModel.contactsName == "Unknown" || contactsModel.contactsType == "Unknown" {
+            alertOk(title: "Error", message: "Requered")
+        } else {
+            setImageModel()
+            
+            RealmManager.shared.saveContactsModel(model: contactsModel)
+            contactsModel = ContactsModel()
+            
+            alertOk(title: "Success", message: nil)
+            tableView.reloadData()
+        }
+    }
+    
+    @objc private func setImageModel() {
+        
+        if imageIsChange {
+            let cell = tableView.cellForRow(at: [4,0]) as! OptionTVCell
+            
+            let image = cell.backgroundViewCell.image
+            guard let imageData = image?.pngData() else { return }
+            contactsModel.contactsImage = imageData
+            
+            cell.backgroundViewCell.contentMode = .scaleAspectFit
+            imageIsChange = false
+        } else {
+            contactsModel.contactsImage = nil
+        }
     }
     
     private func setDelegate() {
@@ -45,7 +81,6 @@ class ContactsOptionTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
             return 1
     }
     
@@ -76,16 +111,16 @@ class ContactsOptionTVC: UITableViewController {
 
         switch indexPath.section {
         case 0: alertCellName(label: cell.nameCellLabel, name: "Name Contact", placeHolder: "Enter Name Contact") { text in
-            print(text)
+            self.contactsModel.contactsName = text
         }
         case 1: alertCellName(label: cell.nameCellLabel, name: "Phone number", placeHolder: "Enter Name Contact") { text in
-            print(text)
+            self.contactsModel.contactsPhone = text
         }
         case 2: alertCellName(label: cell.nameCellLabel, name: "Mail", placeHolder: "Enter Name Contact") { text in
-            print(text)
+            self.contactsModel.contactsMail = text
         }
         case 3: alertOfTeacher(label: cell.nameCellLabel) { type in
-            print(type)
+            self.contactsModel.contactsType = type
         }
         case 4: alertPhotoCamera(label: cell.nameCellLabel) { [self] source in
             chooseImagePicker(source: source)
@@ -121,6 +156,7 @@ extension ContactsOptionTVC: UIImagePickerControllerDelegate, UINavigationContro
         cell.backgroundViewCell.image = info[.editedImage] as? UIImage
         cell.backgroundViewCell.contentMode = .scaleAspectFill
         cell.backgroundViewCell.clipsToBounds = true
+        imageIsChange = true
         dismiss(animated: true)
     }
 }

@@ -253,8 +253,8 @@
 			children = (
 				5237423228B90511003FAA47 /* View */,
 				52AD8D8E28BB5216001C77F2 /* ContactsTVC.swift */,
-				52EF27B728BBEE4600182438 /* ContactsTicherVC.swift */,
 				52EF27C728BC970E00182438 /* ContactsOptionTVC.swift */,
+				52EF27B728BBEE4600182438 /* ContactsTicherVC.swift */,
 			);
 			path = ContactsVC;
 			sourceTree = "<group>";

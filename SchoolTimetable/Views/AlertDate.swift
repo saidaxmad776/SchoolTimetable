@@ -33,7 +33,7 @@ extension UIViewController {
             guard component.weekday != nil else { return }
             let numberWeekday = component.weekday
             let date = datePicker.date as Date
-            completionHandler(numberWeekday ?? 0, date)
+            completionHandler(numberWeekday!, date)
             
             label.text = dateString
         }
