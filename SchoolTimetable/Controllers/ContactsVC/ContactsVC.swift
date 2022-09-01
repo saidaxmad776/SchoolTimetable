@@ -31,6 +31,16 @@ class ContactsVC: UIViewController {
     
     private let localRealm = try! Realm()
     private var contactsArray: Results<ContactsModel>!
+    private var filtredArray: Results<ContactsModel>!
+    
+    var searchBarIsEmpty: Bool {
+        guard let text = searchController.searchBar.text else { return true }
+        return text.isEmpty
+    }
+    
+    var isFiltring: Bool {
+        return searchController.isActive && !searchBarIsEmpty
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -61,6 +71,8 @@ class ContactsVC: UIViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
                                                             target: self, action: #selector(addButtonTap))
+        
+        searchController.obscuresBackgroundDuringPresentation = false
     }
     
     @objc private func segmentedChanged() {
@@ -83,6 +95,7 @@ class ContactsVC: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+        searchController.searchResultsUpdater = self
     }
     
 }
@@ -91,12 +104,12 @@ class ContactsVC: UIViewController {
 extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        contactsArray.count
+         return (isFiltring ? filtredArray.count : contactsArray.count)
     }
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idContactCell, for: indexPath) as! ContactsTVCell
-        let model = contactsArray[indexPath.row]
+         let model = (isFiltring ? filtredArray[indexPath.row] : contactsArray[indexPath.row])
         cell.configure(model: model)
         return cell
     }
@@ -118,6 +131,18 @@ extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
         }
         
         return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+}
+
+extension ContactsVC: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+    
+    private func filterContentForSearchText(_ searchText: String) {
+        filtredArray = contactsArray.filter("contactsName CONTAINS[c] %@", searchText)
+        tableView.reloadData()
     }
 }
 
