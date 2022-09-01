@@ -45,6 +45,7 @@ class ScheduleOptionTVC: UITableViewController {
             scheduleModel = ScheduleModel()
             alertOk(title: "Success", message: nil)
             hexColorCell = "FFFFFF"
+            cellNameArray[2][0] = "Teacher Name"
             tableView.reloadData()
         }
         

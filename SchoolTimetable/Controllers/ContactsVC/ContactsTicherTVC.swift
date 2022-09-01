@@ -22,7 +22,7 @@ class ContactsTicherTVC: UITableViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: teacherId)
+        tableView.register(ContactsTVCell.self, forCellReuseIdentifier: teacherId)
         
         contactsArray = localRealm.objects(ContactsModel.self).filter("contactsType = 'Teacher'")
     }

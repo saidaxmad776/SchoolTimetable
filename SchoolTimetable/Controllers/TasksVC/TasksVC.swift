@@ -38,6 +38,7 @@ class TasksVC: UIViewController {
         tableView.bounces = false
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorInset = .zero
+        tableView.backgroundColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -120,6 +121,27 @@ class TasksVC: UIViewController {
             showHideTapBTN()
         default:
             break
+        }
+    }
+    
+    private func animateTableView() {
+        tableView.reloadData()
+        
+        let cells = tableView.visibleCells
+        let tableViewHeight = tableView.bounds.height
+        
+        for cell in cells {
+            cell.transform = CGAffineTransform(translationX: 0, y: tableViewHeight)
+            
+            UIView.animate(withDuration: 1.5,
+                           delay: 1,
+                           usingSpringWithDamping: 0.8,
+                           initialSpringVelocity: 0,
+                           options: .curveEaseInOut,
+                           animations: {
+                cell.transform = CGAffineTransform.identity
+            },
+                           completion: nil)
         }
     }
     
