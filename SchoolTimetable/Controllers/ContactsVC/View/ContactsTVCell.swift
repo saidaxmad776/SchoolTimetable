@@ -81,7 +81,7 @@ class ContactsTVCell: UITableViewCell {
         addSubview(nameLabel)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        stackViewLabel = UIStackView(arrangedSubviews: [phoneImageView, phoneNumber, mailImageView, mailLabel], axis: .vertical, spacing: 5, distributiom: .equalSpacing)
+        stackViewLabel = UIStackView(arrangedSubviews: [phoneImageView, phoneNumber, mailImageView, mailLabel], axis: .horizontal, spacing: 2, distributiom: .equalSpacing)
         
         addSubview(stackViewLabel)
         stackViewLabel.translatesAutoresizingMaskIntoConstraints = false

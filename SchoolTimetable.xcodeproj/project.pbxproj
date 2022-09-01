@@ -15,7 +15,7 @@
 		52AD8D8828BA3F81001C77F2 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD8D8728BA3F81001C77F2 /* ScheduleVC.swift */; };
 		52AD8D8B28BB506B001C77F2 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD8D8A28BB506B001C77F2 /* TabBarVC.swift */; };
 		52AD8D8D28BB520D001C77F2 /* TasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD8D8C28BB520D001C77F2 /* TasksVC.swift */; };
-		52AD8D8F28BB5216001C77F2 /* ContactsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD8D8E28BB5216001C77F2 /* ContactsTVC.swift */; };
+		52AD8D8F28BB5216001C77F2 /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD8D8E28BB5216001C77F2 /* ContactsVC.swift */; };
 		52EF279228BB790600182438 /* TasksTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF279128BB790600182438 /* TasksTVCell.swift */; };
 		52EF279528BB7B2100182438 /* AlertDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF279428BB7B2100182438 /* AlertDate.swift */; };
 		52EF279728BB7B5700182438 /* AlertForCellName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF279628BB7B5700182438 /* AlertForCellName.swift */; };
@@ -57,7 +57,7 @@
 		52AD8D8728BA3F81001C77F2 /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		52AD8D8A28BB506B001C77F2 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		52AD8D8C28BB520D001C77F2 /* TasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksVC.swift; sourceTree = "<group>"; };
-		52AD8D8E28BB5216001C77F2 /* ContactsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTVC.swift; sourceTree = "<group>"; };
+		52AD8D8E28BB5216001C77F2 /* ContactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsVC.swift; sourceTree = "<group>"; };
 		52EF279128BB790600182438 /* TasksTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTVCell.swift; sourceTree = "<group>"; };
 		52EF279428BB7B2100182438 /* AlertDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDate.swift; sourceTree = "<group>"; };
 		52EF279628BB7B5700182438 /* AlertForCellName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertForCellName.swift; sourceTree = "<group>"; };
@@ -252,7 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				5237423228B90511003FAA47 /* View */,
-				52AD8D8E28BB5216001C77F2 /* ContactsTVC.swift */,
+				52AD8D8E28BB5216001C77F2 /* ContactsVC.swift */,
 				52EF27C728BC970E00182438 /* ContactsOptionTVC.swift */,
 				52EF27B728BBEE4600182438 /* ContactsTicherVC.swift */,
 			);
@@ -454,7 +454,7 @@
 				52EF279728BB7B5700182438 /* AlertForCellName.swift in Sources */,
 				52EF27B328BB9F1200182438 /* OptionHTCell.swift in Sources */,
 				52EF27A728BB7D1100182438 /* UIStackView + Ext.swift in Sources */,
-				52AD8D8F28BB5216001C77F2 /* ContactsTVC.swift in Sources */,
+				52AD8D8F28BB5216001C77F2 /* ContactsVC.swift in Sources */,
 				52EF27B128BB9EFD00182438 /* ColorTVCell.swift in Sources */,
 				52EF27CA28BDE1BA00182438 /* TasksModel.swift in Sources */,
 			);
