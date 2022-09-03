@@ -51,6 +51,7 @@ class TasksVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+        
     }
     
     override func viewDidLoad() {
@@ -121,27 +122,6 @@ class TasksVC: UIViewController {
             showHideTapBTN()
         default:
             break
-        }
-    }
-    
-    private func animateTableView() {
-        tableView.reloadData()
-        
-        let cells = tableView.visibleCells
-        let tableViewHeight = tableView.bounds.height
-        
-        for cell in cells {
-            cell.transform = CGAffineTransform(translationX: 0, y: tableViewHeight)
-            
-            UIView.animate(withDuration: 1.5,
-                           delay: 1,
-                           usingSpringWithDamping: 0.8,
-                           initialSpringVelocity: 0,
-                           options: .curveEaseInOut,
-                           animations: {
-                cell.transform = CGAffineTransform.identity
-            },
-                           completion: nil)
         }
     }
     
@@ -219,10 +199,8 @@ extension TasksVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idTasksCell, for: indexPath) as! TasksTVCell
         cell.selectionStyle = .none
-        
         cell.cellTaskDelegate = self
         cell.index = indexPath
-        
         let model = tasksArray[indexPath.row]
         cell.configure(model: model)
         

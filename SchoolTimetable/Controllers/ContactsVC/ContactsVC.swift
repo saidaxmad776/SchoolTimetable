@@ -46,6 +46,7 @@ class ContactsVC: UIViewController {
         super.viewWillAppear(animated)
         
         tableView.reloadData()
+        
     }
     
     override func viewDidLoad() {
@@ -59,6 +60,7 @@ class ContactsVC: UIViewController {
         
         contactsArray = localRealm.objects(ContactsModel.self).filter("contactsType = 'Friend'")
     }
+    
     
     private func setupView() {
         

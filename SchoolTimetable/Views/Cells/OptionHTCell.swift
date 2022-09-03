@@ -11,6 +11,11 @@ class OptionHTCell: UITableViewHeaderFooterView {
     
     let headerLabel = UILabel(text: "Header", font: UIFont(name: "GillSans-Bold", size: 15), alignment: .left, color: .black)
     
+    override func layoutIfNeeded() {
+        super.layoutIfNeeded()
+        
+    }
+    
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         
@@ -33,6 +38,7 @@ class OptionHTCell: UITableViewHeaderFooterView {
     func headerConfigure(nameArray: [String], section: Int) {
          headerLabel.text = nameArray[section]
     }
+    
     
     private func setConstraints() {
         

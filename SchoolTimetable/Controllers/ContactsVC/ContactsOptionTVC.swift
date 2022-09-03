@@ -20,6 +20,11 @@ class ContactsOptionTVC: UITableViewController {
     private var imageIsChange = false
     private var contactsModel = ContactsModel()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        animateTableView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +43,29 @@ class ContactsOptionTVC: UITableViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save,
                                                             target: self, action: #selector(saveButtonTap))
+    }
+    
+    private func animateTableView() {
+        tableView.reloadData()
+        
+        let cells = tableView.visibleCells
+        let tableViewWidth = tableView.frame.width
+        var delay = 0
+        
+        for cell in cells {
+            cell.transform = CGAffineTransform(translationX: -tableViewWidth, y: 0)
+            
+            UIView.animate(withDuration: 1.5,
+                           delay: Double(delay) * 0.1,
+                           usingSpringWithDamping: 0.8,
+                           initialSpringVelocity: 0,
+                           options: .curveEaseInOut,
+                           animations: {
+                cell.transform = CGAffineTransform.identity
+            },
+                           completion: nil)
+            delay += 1
+        }
     }
     
     @objc private func saveButtonTap() {

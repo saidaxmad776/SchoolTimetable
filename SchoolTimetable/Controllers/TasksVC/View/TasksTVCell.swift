@@ -29,6 +29,8 @@ class TasksTVCell: UITableViewCell {
     
     private var stackViewLabel = UIStackView()
     
+    
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
