@@ -44,6 +44,7 @@
 		52EF27C828BC970E00182438 /* ContactsOptionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27C728BC970E00182438 /* ContactsOptionTVC.swift */; };
 		52EF27CA28BDE1BA00182438 /* TasksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27C928BDE1BA00182438 /* TasksModel.swift */; };
 		52EF27CC28BDE1E800182438 /* ContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF27CB28BDE1E800182438 /* ContactsModel.swift */; };
+		52F99CE528C4AFB500A1551E /* OnbordingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F99CE428C4AFB500A1551E /* OnbordingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		52EF27C728BC970E00182438 /* ContactsOptionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsOptionTVC.swift; sourceTree = "<group>"; };
 		52EF27C928BDE1BA00182438 /* TasksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksModel.swift; sourceTree = "<group>"; };
 		52EF27CB28BDE1E800182438 /* ContactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsModel.swift; sourceTree = "<group>"; };
+		52F99CE428C4AFB500A1551E /* OnbordingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbordingVC.swift; sourceTree = "<group>"; };
 		AB157861A9E3A36ED6100C18 /* Pods-SchoolTimetable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolTimetable.debug.xcconfig"; path = "Target Support Files/Pods-SchoolTimetable/Pods-SchoolTimetable.debug.xcconfig"; sourceTree = "<group>"; };
 		E0B85047427947159FA3CAEB /* Pods-SchoolTimetable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolTimetable.release.xcconfig"; path = "Target Support Files/Pods-SchoolTimetable/Pods-SchoolTimetable.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +161,7 @@
 		5237422528B903DB003FAA47 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				52F99CE328C4AFA200A1551E /* OnbordingVC */,
 				52AD8D8928BB5059001C77F2 /* TabBarController */,
 				5237422C28B9049A003FAA47 /* ScheduleVC */,
 				5237422D28B904A7003FAA47 /* TasksVC */,
@@ -301,6 +304,14 @@
 			path = TabBarController;
 			sourceTree = "<group>";
 		};
+		52F99CE328C4AFA200A1551E /* OnbordingVC */ = {
+			isa = PBXGroup;
+			children = (
+				52F99CE428C4AFB500A1551E /* OnbordingVC.swift */,
+			);
+			path = OnbordingVC;
+			sourceTree = "<group>";
+		};
 		A462DBB73C6EA95D8BBB2FBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +437,7 @@
 				52EF27CC28BDE1E800182438 /* ContactsModel.swift in Sources */,
 				52EF27B528BB9F2F00182438 /* OptionTVCell.swift in Sources */,
 				52EF279D28BB7BD700182438 /* AlertPhotoCamera.swift in Sources */,
+				52F99CE528C4AFB500A1551E /* OnbordingVC.swift in Sources */,
 				52EF279928BB7B9F00182438 /* AlertOfTeacher.swift in Sources */,
 				52EF279528BB7B2100182438 /* AlertDate.swift in Sources */,
 				5237421128B9039A003FAA47 /* AppDelegate.swift in Sources */,
